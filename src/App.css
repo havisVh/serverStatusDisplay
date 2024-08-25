@@ -36,3 +36,164 @@
     transform: rotate(360deg);
   }
 }
+
+.Container{
+  width: 80%;
+  background-color: #252525;
+  box-shadow: 0px 12px 10px -10px #00000041;
+  border: 2px solid #232323;
+  border-radius: 24px;
+  height: 200px;
+  display: grid;
+  grid-template-rows: 20% 80%;
+  grid-template-columns: 100%;
+  overflow: hidden;
+  justify-items: center;
+}
+
+.innerHeader{
+  margin-top: 12px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 95%;
+  grid-row: 1/2;
+  /* border-bottom: 1px solid #00000041; */
+}
+
+#status{
+  font-size: 12px;
+  color: #f3f3f3;
+  margin-right: 10px;
+}
+
+.switchContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-right: 10px; */
+  height: 40px;
+  overflow: hidden;
+  /* border-radius: 12px; */
+  gap: 2px;
+}
+
+.switchContainer>.switch{
+  position: relative;
+  display: flex;
+  width: 60px;
+  height: 34px;
+  background-color: #2b2b2b;
+  cursor: pointer;
+  border: 1px solid #1d1d1d;
+  font-size: 60%;
+  border-radius: 4px;
+  align-items: center;
+  vertical-align: middle;
+  color: rgb(243, 243, 243);
+  transition: 200ms;
+  justify-content: center;
+}
+
+.switchContainer>.switch:hover{
+  background-color: #a1d2ff;
+  color: #2f2f2f;
+}
+.switchContainer>.switch.active{
+  background-color: #74d0ff;
+  color: #023b4b;
+  border: 1px solid #06005f;
+}
+
+
+
+.SlingRing{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-row: 2/3;
+  /* border: 1px solid #00000041; */
+}
+
+
+.ringContainer{
+  width: 95%;
+  /* background-color: #a1d2ff; */
+  border-radius: 12px;
+  height: 72px;
+  display: flex;
+  gap: 4px;
+  align-content: flex-end;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.ringContainer>.ring{
+  width: calc(100% / 24);
+  border-radius:4px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #00000041;
+  /* transition: 100ms; */
+  opacity: 0;;
+}
+
+.ringContainer>.ring.running{
+  background-color: #00ff62;
+}
+.ringContainer>.ring.running:hover{
+  background-color: #5aff5700;
+  border: 1px solid #00ff62;
+}
+
+.ringContainer>.ring.failed{
+  background-color: #ff585e;
+}
+.ringContainer>.ring.failed:hover{
+  background-color: #ff585e00;
+  border: 1px solid #ff585e;
+}
+.ringContainer>.ring.maintenance{
+  background-color: rgb(0, 157, 255);
+}
+.ringContainer>.ring.maintenance:hover{
+  background-color: #00a2ff00;
+  border: 1px solid #00a1ff;
+}
+.ringContainer>.ring:hover{
+  scale: 1.1;
+}
+
+
+@keyframes load {
+  0% {
+    transform: scale(0.5);
+    height: 12px;
+    background-color: #1683ff;
+    
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.4) translateY(-12px);
+    background-color: #1683ff;
+    
+
+  }
+  70% {
+    transform: scale(1) ;
+    height: 24px;
+    background-color: #00fffb;
+
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    /* height: 0px; */
+    opacity: 1;
+  }
+  
+}

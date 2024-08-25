@@ -1,22 +1,36 @@
-import logo from './logo.svg';
+import Slid from './loaderComp/loaderComp';
 import './App.css';
+import React,{ useEffect,useState } from 'react';
 
-function App() {
+// console.log('App.js');
+
+
+ function App() {
+  
+  const [dta, setDta] = useState([]);
+  const [wtFtch, setWtFtch] = useState(true);
+  
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch('status.json');
+      const json = await response.json();
+      setDta(json);
+    };
+
+    fetchData();
+    setWtFtch(false);
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {wtFtch?(
+          <></>
+        ):(
+                  <Slid load={dta}/>
+
+        )}
+        
       </header>
     </div>
   );
