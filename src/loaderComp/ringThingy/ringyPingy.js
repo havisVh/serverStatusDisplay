@@ -10,7 +10,7 @@ function Rings({dtaLLd,showProp,animated=true}){
         <div className="ringContainer">
             {animated?(<>
                 {dmn.map((item, index) => {
-                const rando = random(0,110022);
+                const rando = random(0,11333333);
                 return(
                         <div className={"ring "+item.status} key={index + item.error + rando} 
                         style={{animation:"load 500ms ease forwards",animationDelay:10* index + "ms"}}

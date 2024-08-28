@@ -47,7 +47,7 @@ function StatusOverview({load,vertex,config}){
                         <div className="dataRow">
                             <div className="dataCell">Time</div>
                             <div className="dataCell">{
-                                new Date(details.timeStamp).toLocaleTimeString() + " " + new Date(details.timeStamp).toLocaleDateString('en-uk')
+                                new Date(details.timestamp).toLocaleTimeString() + " " + new Date(details.timestamp).toLocaleDateString('en-uk')
                                 }</div>
                         </div>
                     </div>

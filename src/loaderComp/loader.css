@@ -161,10 +161,10 @@
     border: 1px solid #00ff62;
   }
   
-  .ringContainer>.ring.failed{
+  .ringContainer>.ring.error{
     background-color: #ff585e;
   }
-  .ringContainer>.ring.failed:hover{
+  .ringContainer>.ring.error:hover{
     background-color: #ff585e00;
     border: 1px solid #ff585e;
   }
