@@ -115,7 +115,7 @@ They show the status passed through the dtaLLd attribute
     <Rings dtaLLd={load.data} showProp={passProp} animated={config.animated}/>
 ```
 
-* dtaLLD - it used to pass the data.
+* dtaLLD - it's used to pass the data.
 * showProp - takes a function, and calls it whenever a slice/ring is clicked, the passed function is responsible for showing the details of the selected ring
 
 * animated - this property was discussed before, in the main config variable section
